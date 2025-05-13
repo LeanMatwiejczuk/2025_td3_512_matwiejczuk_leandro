@@ -1,0 +1,39 @@
+!SESSION 2025-05-12 19:34:41.135 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\matia\Desktop\Lean\Forkeo_Git_cátedra\2025_td3_512_matwiejczuk_leandro\3_trabajos_practicos
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-05-12 19:34:52.844
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-05-12 19:34:52.848
+!MESSAGE Log4j2 initialized with config file C:\Users\matia\Desktop\Lean\Forkeo_Git_cátedra\2025_td3_512_matwiejczuk_leandro\3_trabajos_practicos\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-05-12 19:35:00.155
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-05-12 19:36:06.527
+!MESSAGE Indexed 'Tp1_v2' (35 sources, 149 headers) in 13 sec: 15,356 declarations; 71,803 references; 1 unresolved inclusions; 202 syntax errors; 246 unresolved names (0.28%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-05-12 19:36:13.999
+!MESSAGE Indexed 'Tp1_v1' (35 sources, 149 headers) in 7.45 sec: 15,355 declarations; 71,791 references; 1 unresolved inclusions; 202 syntax errors; 246 unresolved names (0.28%)
+!SESSION 2025-05-12 19:39:08.290 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-05-12 19:39:18.082
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-05-12 19:39:18.084
+!MESSAGE Log4j2 initialized with config file C:\Users\matia\Desktop\Lean\Forkeo_Git_cátedra\2025_td3_512_matwiejczuk_leandro\3_trabajos_practicos\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-05-12 19:39:29.948
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-05-12 19:41:18.737
+!MESSAGE Indexed 'firmware' (35 sources, 149 headers) in 8.69 sec: 15,356 declarations; 71,803 references; 1 unresolved inclusions; 202 syntax errors; 246 unresolved names (0.28%)
