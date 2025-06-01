@@ -34,6 +34,7 @@ typedef struct{
 	uint16_t TempVal;
 	uint16_t VrefVal;
 }xDataAdc;
+xDataAdc Temp_DMA_BUFFER;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -51,6 +52,7 @@ typedef struct{
 
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
+DMA_HandleTypeDef hdma_adc1;
 
 UART_HandleTypeDef huart1;
 
@@ -61,11 +63,6 @@ const osThreadAttr_t defaultTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
-/* Definitions for msgTemp */
-osMessageQueueId_t msgTempHandle;
-const osMessageQueueAttr_t msgTemp_attributes = {
-  .name = "msgTemp"
-};
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -73,9 +70,9 @@ const osMessageQueueAttr_t msgTemp_attributes = {
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-static void MX_ADC1_Init(void);
+static void MX_DMA_Init(void);
 static void MX_USART1_UART_Init(void);
-uint8_t uint16_to_ascii(uint16_t num, char* buffer, int len);
+static void MX_ADC1_Init(void);
 void StartDefaultTask(void *argument);
 
 /* USER CODE BEGIN PFP */
@@ -84,39 +81,12 @@ xQueueHandle xAdcTempHandle;	/*Creo handle de la queue*/
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void adc_temp(void *p){
-	TickType_t xLastWakeTime = xTaskGetTickCount();
-	xDataAdc xAdcValue;	//Primer valor : Temp, Segundo valor: Vref
-	ADC_ChannelConfTypeDef sConfig={0};
-	/*El hardware que utilizo especifica que si quiero medir correctamente la temperatura,
-	 * tengo que medir la referencia interna del ADC, compararla con la referencia teórica
-	 * y usar ese dato como la cantidad de cuentas para calcular la temperatura */
+
+void read_adc(void *p){
 	for(;;){
-		/*Configuración y lectura del canal TEMPSENSOR en ADC1*/
-		sConfig.Channel	=	ADC_CHANNEL_TEMPSENSOR;
-		sConfig.Rank	=	1;
-		if(HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
-			Error_Handler();
-
-		HAL_ADC_Start(&hadc1);
-		HAL_ADC_PollForConversion(&hadc1, 1);
-		xAdcValue.TempVal = (uint16_t)HAL_ADC_GetValue(&hadc1);
-		HAL_ADC_Stop(&hadc1);
-
-		/*Configuración y lectura del canal VREFINT en ADC1*/
-		sConfig.Channel	=	ADC_CHANNEL_VREFINT;
-		sConfig.Rank	=	1;
-		if(HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
-			Error_Handler();
-
-		HAL_ADC_Start(&hadc1);
-		HAL_ADC_PollForConversion(&hadc1, 1);
-		xAdcValue.VrefVal = (uint16_t)HAL_ADC_GetValue(&hadc1);
-		HAL_ADC_Stop(&hadc1);
-
-		/*Envío de datos a la queue, y llamo a un delay de tiempo absoluto al inicio de tarea*/
-		xQueueSend(xAdcTempHandle,&xAdcValue,0/portTICK_RATE_MS);
-		vTaskDelayUntil(&xLastWakeTime, 50/portTICK_RATE_MS);
+ 		//HAL_ADC_Start_IT(&hadc1);
+ 		HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&Temp_DMA_BUFFER, 2);
+		vTaskDelay(1000/portTICK_RATE_MS);
 	}
 }
 void temp_write(void *p){
@@ -206,8 +176,9 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_ADC1_Init();
+  MX_DMA_Init();
   MX_USART1_UART_Init();
+  MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -227,10 +198,6 @@ int main(void)
   /* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
 
-  /* Create the queue(s) */
-  /* creation of msgTemp */
-  msgTempHandle = osMessageQueueNew (16, sizeof(uint16_t), &msgTemp_attributes);
-
   /* USER CODE BEGIN RTOS_QUEUES */
   /*Configuro handle ya creado para la queue y a la queue, con tipo de dato struct 2 * uint16_t */
 
@@ -245,8 +212,8 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /*Tarea de lectura de adc*/
-  if(xTaskCreate(adc_temp,"ADC_TEMP", configMINIMAL_STACK_SIZE, NULL, osPriorityNormal, NULL)!=pdPASS)
-  	  Error_Handler();
+  if(xTaskCreate(read_adc,"ADC_READ", configMINIMAL_STACK_SIZE, NULL, osPriorityNormal, NULL)!=pdPASS)
+	  Error_Handler();
   /*Tarea de recepción y manejo de datos*/
   if(xTaskCreate(temp_write,"TEMP_WRITE", configMINIMAL_STACK_SIZE, NULL, osPriorityNormal+1, NULL)!=pdPASS)
   	  Error_Handler();
@@ -289,14 +256,13 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL.PLLM = 8;
-  RCC_OscInitStruct.PLL.PLLN = 100;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLM = 4;
+  RCC_OscInitStruct.PLL.PLLN = 192;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4;
   RCC_OscInitStruct.PLL.PLLQ = 8;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -309,7 +275,7 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_3) != HAL_OK)
@@ -343,14 +309,13 @@ static void MX_ADC1_Init(void)
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.ScanConvMode = ENABLE;
   hadc1.Init.ContinuousConvMode = DISABLE;
-  hadc1.Init.DiscontinuousConvMode = ENABLE;
-  hadc1.Init.NbrOfDiscConversion = 1;
+  hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-  hadc1.Init.NbrOfConversion = 1;
-  hadc1.Init.DMAContinuousRequests = DISABLE;
-  hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+  hadc1.Init.NbrOfConversion = 2;
+  hadc1.Init.DMAContinuousRequests = ENABLE;
+  hadc1.Init.EOCSelection = ADC_EOC_SEQ_CONV;
   if (HAL_ADC_Init(&hadc1) != HAL_OK)
   {
     Error_Handler();
@@ -360,13 +325,23 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_TEMPSENSOR;
   sConfig.Rank = 1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_28CYCLES;
+  sConfig.SamplingTime = ADC_SAMPLETIME_144CYCLES;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
+  */
+  sConfig.Channel = ADC_CHANNEL_VREFINT;
+  sConfig.Rank = 2;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
   }
   /* USER CODE BEGIN ADC1_Init 2 */
-
+  HAL_NVIC_SetPriority(ADC_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(ADC_IRQn);
   /* USER CODE END ADC1_Init 2 */
 
 }
@@ -401,6 +376,22 @@ static void MX_USART1_UART_Init(void)
   /* USER CODE BEGIN USART1_Init 2 */
 
   /* USER CODE END USART1_Init 2 */
+
+}
+
+/**
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void)
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA2_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA2_Stream0_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA2_Stream0_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Stream0_IRQn);
 
 }
 
@@ -547,7 +538,19 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+{
+    // Read & Update The ADC Result
+	//Llama a esta función cuando termina 1 ciclo de conversión de todos los canales
+	static xDataAdc tempval={0,0};
+	static portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
 
+	tempval.TempVal=Temp_DMA_BUFFER.TempVal;
+	tempval.VrefVal=Temp_DMA_BUFFER.VrefVal;
+	HAL_ADC_Stop_DMA(&hadc1);
+	xQueueSendToBackFromISR(xAdcTempHandle,&tempval,&xHigherPriorityTaskWoken);
+
+}
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartDefaultTask */
@@ -563,8 +566,7 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	  HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
-	  osDelay(250);
+    osDelay(1);
   }
   /* USER CODE END 5 */
 }
