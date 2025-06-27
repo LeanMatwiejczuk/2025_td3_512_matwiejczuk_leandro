@@ -31,6 +31,7 @@ typedef struct{
 	float Press;
 	float RawHum;
 	float Hum;
+	float ErrorTemp;
 } BMP280_Data_t;
 
 /**

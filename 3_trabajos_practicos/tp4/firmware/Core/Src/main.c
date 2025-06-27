@@ -19,13 +19,13 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
 #include "bmp280.h"
 #include "lcd.h"
 #include "semphr.h"
 #include "queue.h"
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,6 +46,8 @@
 /* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c1;
 
+TIM_HandleTypeDef htim2;
+
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
@@ -57,16 +59,15 @@ const osThreadAttr_t defaultTask_attributes = {
 BMP280_HandleTypedef bmp280;
 SemaphoreHandle_t xMutex;
 QueueHandle_t xDataQueue;
+QueueHandle_t xPageQueue;
 
-
-uint16_t size;
-uint8_t Data[256];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
+static void MX_TIM2_Init(void);
 void StartDefaultTask(void *argument);
 
 /* USER CODE BEGIN PFP */
@@ -75,39 +76,74 @@ void StartDefaultTask(void *argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void Set_PWM_DutyCycle(uint8_t percent) {
+  if(percent > 100) percent = 100;
+  if(percent < 0) percent = 0;
+  uint32_t pulse = (htim2.Init.Period + 1) * percent / 100;
+  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, pulse);
+}
 void Measure(void *p){
 	BMP280_Data_t data={0};
+	float SetPoint=25.0;
 	for(;;){
 		xSemaphoreTake(xMutex,portMAX_DELAY);
 		bmp280_read_float(&bmp280, &data.Temp, &data.Press, &data.Hum);
+		data.ErrorTemp = SetPoint-data.Temp;
+		data.ErrorTemp = data.ErrorTemp / SetPoint;
 		xQueueOverwrite(xDataQueue,&data);
 		xSemaphoreGive(xMutex);
 		vTaskDelay(1000/portTICK_RATE_MS);
 	}
 }
+
 void Display(void *p){
 	BMP280_Data_t rec_data={0};
+	int err1;
+	int err2;
 	int temp1;
 	int temp2;
 	int press1;
 	int press2;
+	int last_pag=0;
+	int pag=0;
 	char buf0[20];
 	char buf1[20];
+	char buf2[20];
 	for(;;){
 		xSemaphoreTake(xMutex,portMAX_DELAY);
 		if(xQueueReceive(xDataQueue, &rec_data, portMAX_DELAY)==pdPASS){
-			temp1=(int)rec_data.Temp;
-			temp2=(int)((rec_data.Temp-temp1)*100);
-			sprintf(buf0,"Temp: %d.%02d'C",temp1,temp2);
-			rec_data.Press=rec_data.Press/1000;
-			press1=(int)rec_data.Press;
-			press2=(int)((rec_data.Press-press1)*100);
-			sprintf(buf1,"Pres: %d.%02dkPa",press1,press2);
-			lcd_clear();
-			lcd_put_cursor(0, 0);
-			lcd_send_string(buf0);
-			lcd_put_cursor(1, 0);
-			lcd_send_string(buf1);
+			err1=(int) rec_data.ErrorTemp;
+			err2=(int) ((rec_data.ErrorTemp-err1)*100);
+			Set_PWM_DutyCycle(err2);
+			xQueuePeek(xPageQueue, &pag, portMAX_DELAY);
+			if(last_pag!=pag){
+				lcd_clear();
+				last_pag=pag;
+			}
+			switch(pag){
+				case 0:
+					temp1=(int)rec_data.Temp;
+					temp2=(int)((rec_data.Temp-temp1)*100);
+					sprintf(buf0,"Temp: %d.%02d'C",temp1,temp2);
+					lcd_put_cursor(0, 0);
+					lcd_send_string(buf0);
+					rec_data.Press=rec_data.Press/1000;
+					press1=(int)rec_data.Press;
+					press2=(int)((rec_data.Press-press1)*100);
+					sprintf(buf1,"Pres: %d.%02dkPa",press1,press2);
+					lcd_put_cursor(1, 0);
+					lcd_send_string(buf1);
+					break;
+				case 1:
+					lcd_put_cursor(0, 0);
+					lcd_send_string("Comparacion con ");
+					lcd_put_cursor(1, 0);
+					sprintf(buf2,"25'C Err: %d.%02d%%",err1,err2);
+					lcd_send_string(buf2);
+					break;
+				default:
+					break;
+			}
 		}
 		xSemaphoreGive(xMutex);
 		vTaskDelay(1000/portTICK_RATE_MS);
@@ -145,7 +181,9 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_I2C1_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
   lcd_init(&hi2c1, LCD_I2C_ADDRESS_0);
   lcd_clear();
   lcd_put_cursor(0, 0);
@@ -160,12 +198,12 @@ int main(void)
   osKernelInitialize();
 
   /* USER CODE BEGIN RTOS_MUTEX */
-  /* add mutexes, ... */
+  xMutex = xSemaphoreCreateMutex();
+  if(xMutex == NULL)Error_Handler();
   /* USER CODE END RTOS_MUTEX */
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
-  xMutex = xSemaphoreCreateMutex();
-  if(xMutex == NULL)Error_Handler();
+  /* add semaphores, ... */
   /* USER CODE END RTOS_SEMAPHORES */
 
   /* USER CODE BEGIN RTOS_TIMERS */
@@ -175,6 +213,11 @@ int main(void)
   /* USER CODE BEGIN RTOS_QUEUES */
   xDataQueue=xQueueCreate(1,sizeof(BMP280_Data_t));
   if(xDataQueue==NULL)Error_Handler();
+
+  int PagNum=0;
+  xPageQueue=xQueueCreate(1,sizeof(int));
+  if(xPageQueue==NULL)Error_Handler();
+  xQueueOverwrite(xPageQueue,&PagNum);
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
@@ -183,8 +226,9 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   if(xTaskCreate(Measure,"Data_Measure", 2*configMINIMAL_STACK_SIZE, NULL, osPriorityAboveNormal, NULL)!=pdPASS) Error_Handler();
-  if(xTaskCreate(Display,"Data_Display", 2*configMINIMAL_STACK_SIZE, NULL, osPriorityNormal, NULL)!=pdPASS)Error_Handler();
+  if(xTaskCreate(Display,"Data_Display", 2*configMINIMAL_STACK_SIZE, NULL, osPriorityNormal, NULL)!=pdPASS) Error_Handler();
   /* USER CODE END RTOS_THREADS */
+
   /* USER CODE BEGIN RTOS_EVENTS */
   /* add events, ... */
   /* USER CODE END RTOS_EVENTS */
@@ -285,6 +329,58 @@ static void MX_I2C1_Init(void)
 }
 
 /**
+  * @brief TIM2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM2_Init(void)
+{
+
+  /* USER CODE BEGIN TIM2_Init 0 */
+
+  /* USER CODE END TIM2_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+
+  /* USER CODE BEGIN TIM2_Init 1 */
+
+  /* USER CODE END TIM2_Init 1 */
+  htim2.Instance = TIM2;
+  htim2.Init.Prescaler = 0;
+  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim2.Init.Period = 9999;
+  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim2.Init.RepetitionCounter = 9;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 5000;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
+  sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
+  if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM2_Init 2 */
+
+  /* USER CODE END TIM2_Init 2 */
+  HAL_TIM_MspPostInit(&htim2);
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -349,8 +445,8 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : PA0 */
   GPIO_InitStruct.Pin = GPIO_PIN_0;
-  GPIO_InitStruct.Mode = GPIO_MODE_EVT_RISING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pin : I2S3_WS_Pin */
@@ -414,12 +510,29 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(OTG_FS_OverCurrent_GPIO_Port, &GPIO_InitStruct);
 
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI0_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(EXTI0_IRQn);
+
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
-
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+	int pag=0;
+	if(GPIO_Pin==GPIO_PIN_0){
+		xQueuePeekFromISR(xPageQueue, &pag);
+		if(pag==1)
+			pag=0;
+		else
+			pag=1;
+		xQueueOverwriteFromISR(xPageQueue,&pag,&xHigherPriorityTaskWoken);
+		portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+	}
+}
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartDefaultTask */
