@@ -188,7 +188,7 @@ GenerateClassCluster=0
 DocumentUniqueId=QSTJTREE
 
 [Document9]
-DocumentPath=PCB1.PcbDoc
+DocumentPath=Proyecto_TD3_esquemático.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -202,10 +202,10 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=OJPLEDGG
+DocumentUniqueId=
 
 [Document10]
-DocumentPath=PCB2.PcbDoc
+DocumentPath=PCB3.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -219,10 +219,27 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=QWUMSFVW
+DocumentUniqueId=LNELKOCS
 
 [Document11]
-DocumentPath=Proyecto_TD3_esquemático.OutJob
+DocumentPath=Proyecto_TD3_R01.OutJob
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document12]
+DocumentPath=CAMtastic1.Cam
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -244,6 +261,142 @@ DItemRevisionGUID=
 
 [GeneratedDocument2]
 DocumentPath=Project Outputs for Proyecto_TD3\Design Rule Check - PCB2.html
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=Project Outputs for Proyecto_TD3\Design Rule Check - PCB3.html
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.1
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GD1
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GG1
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GKO
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM1
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM2
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM3
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM4
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM5
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM6
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM11
+DItemRevisionGUID=
+
+[GeneratedDocument21]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM12
+DItemRevisionGUID=
+
+[GeneratedDocument22]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM13
+DItemRevisionGUID=
+
+[GeneratedDocument23]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM15
+DItemRevisionGUID=
+
+[GeneratedDocument24]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM16
+DItemRevisionGUID=
+
+[GeneratedDocument25]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM20
+DItemRevisionGUID=
+
+[GeneratedDocument26]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM21
+DItemRevisionGUID=
+
+[GeneratedDocument27]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM23
+DItemRevisionGUID=
+
+[GeneratedDocument28]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GM24
+DItemRevisionGUID=
+
+[GeneratedDocument29]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GML
+DItemRevisionGUID=
+
+[GeneratedDocument30]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GPB
+DItemRevisionGUID=
+
+[GeneratedDocument31]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GPT
+DItemRevisionGUID=
+
+[GeneratedDocument32]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument33]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument34]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument35]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument36]
+DocumentPath=Project Outputs for Proyecto_TD3\PCB3.REP
 DItemRevisionGUID=
 
 [Configuration1]
@@ -409,14 +562,44 @@ PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate
 [OutputGroup3]
 Name=Documentation Outputs
 Description=
-TargetPrinter=EPSON XP-211 214 216 Series
+TargetPrinter=Microsoft Print to PDF
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Composite
 OutputName1=Composite Drawing
 OutputDocumentPath1=
 OutputVariantName1=[No Variations]
 OutputDefault1=0
-PageOptions1=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+PageOptions1=Record=PageOptions|CenterHorizontal=False|CenterVertical=False|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=2|BorderSize=5000000|LeftOffset=393|BottomOffset=787|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=0|PaperKind=A4|PaperIndex=9
+Configuration1_Name1=OutputConfigurationParameter1
+Configuration1_Item1=DesignatorDisplayMode=Physical|PrintArea=DesignExtent|PrintAreaLowerLeftCornerX=0|PrintAreaLowerLeftCornerY=0|PrintAreaUpperRightCornerX=0|PrintAreaUpperRightCornerY=0|Record=PcbPrintView|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
+Configuration1_Name2=OutputConfigurationParameter2
+Configuration1_Item2=IncludeBoardCutouts=False|IncludeBottomLayerComponents=True|IncludeMultiLayerComponents=True|IncludeTopLayerComponents=True|IncludeViewports=True|Index=0|Mirror=False|Name=Multilayer Composite Print|PadNumberFontSize=14|Record=PcbPrintOut|ShowHoles=True|ShowPadNets=False|ShowPadNumbers=False|SubstituteFonts=False|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
+Configuration1_Name3=OutputConfigurationParameter3
+Configuration1_Item3=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=MultiLayer|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
+Configuration1_Name4=OutputConfigurationParameter4
+Configuration1_Item4=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=BottomOverlay|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
+Configuration1_Name5=OutputConfigurationParameter5
+Configuration1_Item5=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=BottomLayer|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
+Configuration1_Name6=OutputConfigurationParameter6
+Configuration1_Item6=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=BottomPaste|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
+Configuration1_Name7=OutputConfigurationParameter7
+Configuration1_Item7=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=BottomSolder|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
+Configuration1_Name8=OutputConfigurationParameter8
+Configuration1_Item8=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical3|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
+Configuration1_Name9=OutputConfigurationParameter9
+Configuration1_Item9=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical23|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
+Configuration1_Name10=OutputConfigurationParameter10
+Configuration1_Item10=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical21|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
+Configuration1_Name11=OutputConfigurationParameter11
+Configuration1_Item11=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical24|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
+Configuration1_Name12=OutputConfigurationParameter12
+Configuration1_Item12=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical20|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
+Configuration1_Name13=OutputConfigurationParameter13
+Configuration1_Item13=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical12|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
+Configuration1_Name14=OutputConfigurationParameter14
+Configuration1_Item14=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical6|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
+Configuration1_Name15=OutputConfigurationParameter15
+Configuration1_Item15=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical2|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 OutputType2=Harness Layout Drawing Print
 OutputName2=Harness Layout Drawing Prints
 OutputDocumentPath2=
@@ -499,22 +682,21 @@ Name=Fabrication Outputs
 Description=
 TargetPrinter=EPSON XP-211 214 216 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
-OutputType1=Board Stack Report
-OutputName1=Report Board Stack
+OutputType1=CompositeDrill
+OutputName1=Composite Drill Drawing
 OutputDocumentPath1=
-OutputVariantName1=
+OutputVariantName1=[No Variations]
 OutputDefault1=0
 PageOptions1=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
-OutputType2=CompositeDrill
-OutputName2=Composite Drill Drawing
+OutputType2=Gerber X2
+OutputName2=Gerber X2 Files
 OutputDocumentPath2=
 OutputVariantName2=[No Variations]
 OutputDefault2=0
-PageOptions2=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
-OutputType3=Drill
-OutputName3=Drill Drawing/Guides
+OutputType3=Board Stack Report
+OutputName3=Report Board Stack
 OutputDocumentPath3=
-OutputVariantName3=[No Variations]
+OutputVariantName3=
 OutputDefault3=0
 PageOptions3=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 OutputType4=Final
@@ -523,43 +705,96 @@ OutputDocumentPath4=
 OutputVariantName4=[No Variations]
 OutputDefault4=0
 PageOptions4=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
-OutputType5=Gerber
-OutputName5=Gerber Files
+OutputType5=Drill
+OutputName5=Drill Drawing/Guides
 OutputDocumentPath5=
 OutputVariantName5=[No Variations]
 OutputDefault5=0
-OutputType6=Gerber X2
-OutputName6=Gerber X2 Files
+PageOptions5=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=2.01|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+Configuration5_Name1=ForceUpdateSettings
+Configuration5_Item1=False
+Configuration5_Name2=OutputConfigurationParameter1
+Configuration5_Item2=DesignatorDisplayMode=Physical|PrintArea=DesignExtent|PrintAreaLowerLeftCornerX=0|PrintAreaLowerLeftCornerY=0|PrintAreaUpperRightCornerX=0|PrintAreaUpperRightCornerY=0|Record=PcbPrintView|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name3=OutputConfigurationParameter2
+Configuration5_Item3=IncludeBoardCutouts=False|IncludeBottomLayerComponents=True|IncludeMultiLayerComponents=True|IncludeTopLayerComponents=True|IncludeViewports=True|Index=0|Mirror=False|Name=Drill Drawing For (Top Layer - Bottom Layer)|PadNumberFontSize=14|Record=PcbPrintOut|ShowHoles=False|ShowPadNets=False|ShowPadNumbers=False|SubstituteFonts=False|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name4=OutputConfigurationParameter3
+Configuration5_Item4=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=DrillDrawing|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name5=OutputConfigurationParameter4
+Configuration5_Item5=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical1|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name6=OutputConfigurationParameter5
+Configuration5_Item6=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical2|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name7=OutputConfigurationParameter6
+Configuration5_Item7=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical3|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name8=OutputConfigurationParameter7
+Configuration5_Item8=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical4|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name9=OutputConfigurationParameter8
+Configuration5_Item9=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical5|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name10=OutputConfigurationParameter9
+Configuration5_Item10=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical11|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name11=OutputConfigurationParameter10
+Configuration5_Item11=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical13|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name12=OutputConfigurationParameter11
+Configuration5_Item12=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical15|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name13=OutputConfigurationParameter12
+Configuration5_Item13=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical16|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name14=OutputConfigurationParameter13
+Configuration5_Item14=IncludeBoardCutouts=False|IncludeBottomLayerComponents=True|IncludeMultiLayerComponents=True|IncludeTopLayerComponents=True|IncludeViewports=True|Index=1|Mirror=False|Name=Drill Guide For (Top Layer - Bottom Layer)|PadNumberFontSize=14|Record=PcbPrintOut|ShowHoles=False|ShowPadNets=False|ShowPadNumbers=False|SubstituteFonts=False|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name15=OutputConfigurationParameter14
+Configuration5_Item15=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=DrillGuide|Polygon=Full|PrintOutIndex=1|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name16=OutputConfigurationParameter15
+Configuration5_Item16=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical1|Polygon=Full|PrintOutIndex=1|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name17=OutputConfigurationParameter16
+Configuration5_Item17=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical2|Polygon=Full|PrintOutIndex=1|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name18=OutputConfigurationParameter17
+Configuration5_Item18=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical3|Polygon=Full|PrintOutIndex=1|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name19=OutputConfigurationParameter18
+Configuration5_Item19=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical4|Polygon=Full|PrintOutIndex=1|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name20=OutputConfigurationParameter19
+Configuration5_Item20=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical5|Polygon=Full|PrintOutIndex=1|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name21=OutputConfigurationParameter20
+Configuration5_Item21=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical11|Polygon=Full|PrintOutIndex=1|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name22=OutputConfigurationParameter21
+Configuration5_Item22=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical13|Polygon=Full|PrintOutIndex=1|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name23=OutputConfigurationParameter22
+Configuration5_Item23=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical15|Polygon=Full|PrintOutIndex=1|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+Configuration5_Name24=OutputConfigurationParameter23
+Configuration5_Item24=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical16|Polygon=Full|PrintOutIndex=1|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB2.PcbDoc
+OutputType6=Mask
+OutputName6=Solder/Paste Mask Prints
 OutputDocumentPath6=
 OutputVariantName6=[No Variations]
 OutputDefault6=0
-OutputType7=Mask
-OutputName7=Solder/Paste Mask Prints
+PageOptions6=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+OutputType7=NC Drill
+OutputName7=NC Drill Files
 OutputDocumentPath7=
-OutputVariantName7=[No Variations]
+OutputVariantName7=
 OutputDefault7=0
-PageOptions7=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
-OutputType8=NC Drill
-OutputName8=NC Drill Files
+OutputType8=ODB
+OutputName8=ODB++ Files
 OutputDocumentPath8=
-OutputVariantName8=
+OutputVariantName8=[No Variations]
 OutputDefault8=0
-OutputType9=ODB
-OutputName9=ODB++ Files
+OutputType9=Plane
+OutputName9=Power-Plane Prints
 OutputDocumentPath9=
 OutputVariantName9=[No Variations]
 OutputDefault9=0
-OutputType10=Plane
-OutputName10=Power-Plane Prints
+PageOptions9=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+OutputType10=Test Points
+OutputName10=Test Point Report
 OutputDocumentPath10=
-OutputVariantName10=[No Variations]
+OutputVariantName10=
 OutputDefault10=0
-PageOptions10=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
-OutputType11=Test Points
-OutputName11=Test Point Report
+OutputType11=Gerber
+OutputName11=Gerber Files
 OutputDocumentPath11=
-OutputVariantName11=
+OutputVariantName11=[No Variations]
 OutputDefault11=0
+Configuration11_Name1=ForceUpdateSettings
+Configuration11_Item1=False
+Configuration11_Name2=OutputConfigurationParameter1
+Configuration11_Item2=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray|BoardID=LNELKOCS|CentrePlots=False|DrillDrawingSymbol=GraphicsSymbol|DrillDrawingSymbolSize=500000|EmbeddedApertures=True|FilmBorderSize=10000000|FilmXSize=200000000|FilmYSize=160000000|FlashAllFills=False|FlashPadShapes=True|G54OnApertureChange=False|GenerateDRCRulesFile=False|GenerateDRCRulesFile=False|GenerateReliefShapes=True|GenerateReports=True|GerberUnit=Metric|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=True|LayerClassesMirror.Set= |LayerClassesPlot.Set="All Layers","Component Layers","Signal Layers","Electrical Layers"|LeadingAndTrailingZeroesMode=SuppressLeadingZeroes|MaxApertureSize=2500000|MergePadAndRegion=False|MinusApertureTolerance=50|MinusApertureTolerance=50|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=4|NumberOfDecimals=4|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Relative|OutputFormat=Different|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16842751~1,16777217~1,16973830~1,16973831~1,16973835~1,16973834~1,16908289~1,16908290~1,16908291~1,16908292~1,16908293~1,16908294~1,16908299~1,16908300~1,16908301~1,16908303~1,16908304~1,16908308~1,16908309~1,16908311~1,16908312~1,16973832~1,16973833~1,16973837~1,16973848~1,16973849~1|PlotBoardProfile=True|PlotBoardProfileFileName= |PlotDrillDrawingLayerPair0_Backdrill=False|PlotDrillDrawingLayerPair0_Checked=True|PlotDrillDrawingLayerPair0_DrillType=Regular|PlotDrillDrawingLayerPair0_FileName= |PlotDrillDrawingLayerPair0_HighLayer=Bottom Layer|PlotDrillDrawingLayerPair0_LowLayer=Top Layer|PlotDrillGuideLayerPair0_Backdrill=False|PlotDrillGuideLayerPair0_Checked=True|PlotDrillGuideLayerPair0_DrillType=Regular|PlotDrillGuideLayerPair0_FileName= |PlotDrillGuideLayerPair0_HighLayer=Bottom Layer|PlotDrillGuideLayerPair0_LowLayer=Top Layer|PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=False|PlotUsedDrillGuideLayerPairs=False|PlusApertureTolerance=50|PlusApertureTolerance=50|Record=GerberView|SoftwareArcs=False|Sorted=False|Sorted=False|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 
 [OutputGroup6]
 Name=Report Outputs
@@ -1281,31 +1516,31 @@ ComparisonOptions5=Kind=Structure Class|MinPercent=75|MinMatch=3|ShowMatch=0|Use
 [SmartPDF]
 PageOptions=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 Configuration_Name1=OutputConfigurationParameter1
-Configuration_Item1=DesignatorDisplayMode=Physical|PrintArea=DesignExtent|PrintAreaLowerLeftCornerX=0|PrintAreaLowerLeftCornerY=0|PrintAreaUpperRightCornerX=0|PrintAreaUpperRightCornerY=0|Record=PcbPrintView|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB1.PcbDoc
+Configuration_Item1=DesignatorDisplayMode=Physical|PrintArea=DesignExtent|PrintAreaLowerLeftCornerX=0|PrintAreaLowerLeftCornerY=0|PrintAreaUpperRightCornerX=0|PrintAreaUpperRightCornerY=0|Record=PcbPrintView|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 Configuration_Name2=OutputConfigurationParameter2
-Configuration_Item2=IncludeBoardCutouts=False|IncludeBottomLayerComponents=True|IncludeMultiLayerComponents=True|IncludeTopLayerComponents=True|IncludeViewports=True|Index=0|Mirror=False|Name=Multilayer Composite Print|PadNumberFontSize=14|Record=PcbPrintOut|ShowHoles=False|ShowPadNets=False|ShowPadNumbers=False|SubstituteFonts=False|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB1.PcbDoc
+Configuration_Item2=IncludeBoardCutouts=False|IncludeBottomLayerComponents=True|IncludeMultiLayerComponents=True|IncludeTopLayerComponents=True|IncludeViewports=True|Index=0|Mirror=False|Name=Multilayer Composite Print|PadNumberFontSize=14|Record=PcbPrintOut|ShowHoles=False|ShowPadNets=False|ShowPadNumbers=False|SubstituteFonts=False|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 Configuration_Name3=OutputConfigurationParameter3
-Configuration_Item3=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=TopOverlay|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB1.PcbDoc
+Configuration_Item3=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=TopOverlay|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 Configuration_Name4=OutputConfigurationParameter4
-Configuration_Item4=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=TopLayer|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB1.PcbDoc
+Configuration_Item4=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=TopLayer|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 Configuration_Name5=OutputConfigurationParameter5
-Configuration_Item5=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=BottomLayer|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB1.PcbDoc
+Configuration_Item5=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=BottomLayer|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 Configuration_Name6=OutputConfigurationParameter6
-Configuration_Item6=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=MultiLayer|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB1.PcbDoc
+Configuration_Item6=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=MultiLayer|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 Configuration_Name7=OutputConfigurationParameter7
-Configuration_Item7=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical1|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB1.PcbDoc
+Configuration_Item7=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical1|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 Configuration_Name8=OutputConfigurationParameter8
-Configuration_Item8=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical2|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB1.PcbDoc
+Configuration_Item8=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical2|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 Configuration_Name9=OutputConfigurationParameter9
-Configuration_Item9=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical4|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB1.PcbDoc
+Configuration_Item9=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical4|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 Configuration_Name10=OutputConfigurationParameter10
-Configuration_Item10=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical5|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB1.PcbDoc
+Configuration_Item10=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical5|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 Configuration_Name11=OutputConfigurationParameter11
-Configuration_Item11=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical11|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB1.PcbDoc
+Configuration_Item11=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical11|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 Configuration_Name12=OutputConfigurationParameter12
-Configuration_Item12=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical13|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB1.PcbDoc
+Configuration_Item12=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical13|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 Configuration_Name13=OutputConfigurationParameter13
-Configuration_Item13=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical15|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB1.PcbDoc
+Configuration_Item13=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical15|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 Configuration_Name14=OutputConfigurationParameter14
-Configuration_Item14=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical16|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB1.PcbDoc
+Configuration_Item14=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|DrillType=Regular|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical16|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer|DocumentPath=C:\Users\leand\OneDrive - UTN.BA\Digitales_3\Proyecto Digitales 3\Circuito-Altium\Proyecto_TD3\PCB3.PcbDoc
 
