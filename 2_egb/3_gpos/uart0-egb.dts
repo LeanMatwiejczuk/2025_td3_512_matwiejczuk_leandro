@@ -1,0 +1,16 @@
+/dts-v1/;
+/plugin/;
+
+/{
+	compatible = "brcm,bcm2711";
+
+	fragment@0 {
+		target = <&uart1>;
+		__overlay__ {
+			egb_uart: {
+				compatible = "brightlight,td3_uart";
+				status = "okay";
+			};
+		};
+	};
+};
